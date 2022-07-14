@@ -2,7 +2,7 @@
 
 Name:           gitea
 Version:        1.16.8
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Gitea is a painless self-hosted Git service.
 
 License:        MIT
@@ -44,7 +44,7 @@ install -D -m 0644 %{SOURCE1} %{buildroot}%{_unitdir}/%{name}.service
 %pre
 getent group %{name} >/dev/null || groupadd -r %{name}
 getent passwd %{name} >/dev/null || \
-    useradd -r -g %{name} -d %{_sharedstatedir}/%{name} -s /sbin/nologin \
+    useradd -r -g %{name} -d %{_sharedstatedir}/%{name} -s /bin/bash \
     -c "Gitea Service Account" %{name}
 exit 0
 
@@ -66,6 +66,8 @@ exit 0
 %license LICENSE
 
 %changelog
+* Thu Jul 14 2022 Tsvetan Gerov <tsvetan@gerov.eu> 1.16.8-2
+- Bugfix: Set gitea local user shell to bash
 * Thu Jul 14 2022 Tsvetan Gerov <tsvetan@gerov.eu> 1.16.8-1
 - Initial Build
  
