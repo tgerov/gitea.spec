@@ -1,8 +1,8 @@
 %global debug_package %{nil}
 
 Name:           gitea
-Version:        1.16.8
-Release:        2%{?dist}
+Version:        1.16.9
+Release:        1%{?dist}
 Summary:        Gitea is a painless self-hosted Git service.
 
 License:        MIT
@@ -66,6 +66,8 @@ exit 0
 %license LICENSE
 
 %changelog
+* Sat Jul 16 2022 Tsvetan Gerov <tsvetan@gerov.eu> 1.16.9-1
+- Bump version to 1.16.9
 * Thu Jul 14 2022 Tsvetan Gerov <tsvetan@gerov.eu> 1.16.8-2
 - Bugfix: Set gitea local user shell to bash
 * Thu Jul 14 2022 Tsvetan Gerov <tsvetan@gerov.eu> 1.16.8-1
