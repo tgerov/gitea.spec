@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 
 Name:           gitea
-Version:        1.20.1
+Version:        1.22.1
 Release:        1%{?dist}
 Summary:        Gitea is a painless self-hosted Git service.
 
@@ -66,6 +66,8 @@ exit 0
 %license LICENSE
 
 %changelog
+* Sat Oct 05 2024 Tsvetan Gerov <tsvetan@gerov.eu> 1.22.1-1
+- Bump version to 1.22.1
 * Thu Jul 27 2023 Tsvetan Gerov <tsvetan@gerov.eu> 1.20.1-1
 - Bump version to 1.20.1
 * Thu Sep 29 2022 Tsvetan Gerov <tsvetan@gerov.eu> 1.17.2-1
